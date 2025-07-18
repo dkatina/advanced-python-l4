@@ -37,7 +37,7 @@ print("Sorting my products")
 #create a sorting to target specific fields of individual pieces of data
 #Syntax for a lambda sorting key
 #lambda item: item['price']
-#Total Syntax: sorted(list_to_sort, key = lambda x: 'function to target what we want to sort by')
+#Total Syntax: sorted(list_to_sort, key = lambda single_item_from_list: 'function to target what about that item we want to sort by')
 print(sorted(products, key=lambda product: product['price'], reverse=True)) #Default order is Ascending, reverse = True switchs to descending
 
 students = ['Nicole Cespedes', 'Ray Kofoed', 'Seb F']
@@ -50,3 +50,27 @@ print(first_char_of_last)
 
 print("Sorting by last name (Target the last name with sort key)")
 print(sorted(students, key=lambda student: student.split()[1])) 
+
+#=============== Lambdas as Conditionals (inline if statement) aka ternary operator
+
+grade = 80
+
+if grade >= 90:
+    print('A')
+elif grade >= 80:
+    print('B')
+else:
+    print('FAIL')
+
+#Inline lambda conditionals
+
+assign_letter_grade = lambda grade: 'A' if grade >= 90 else 'B' if grade >= 80 else 'C'
+
+
+#====================== 2 params for lambda
+
+#lambda that adds 2 nums together
+
+add = lambda a,b: a + b
+print(add(5,3))
+
